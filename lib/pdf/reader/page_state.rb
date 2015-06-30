@@ -118,8 +118,10 @@ class PDF::Reader
         state[:text_leading] = leading
       end
 
-      def set_text_rendering_mode(mode)
-        state[:text_mode] = mode
+      def set_text_rendering_mode(mode=nil)
+        if(mode)
+          state[:text_mode] = mode
+        end
       end
 
       def set_text_rise(rise)
